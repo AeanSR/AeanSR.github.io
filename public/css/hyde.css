@@ -45,16 +45,18 @@ html {
   }
 }
 @font-face {
-    font-family: "Agency FB";
+    font-family: "Agency";
     font-weight: normal;
     font-style: normal;
-    src: url("../font/AGENCYR.TTF") format('truetype');
+    src: url("../font/agencyr.eot");
+    src: url("../font/agencyr.eot?#iefix") format('embedded-opentype'), url('../font/agencyr.otf') format('opentype'), url("../font/AGENCYR.TTF") format('truetype');
 }
 @font-face {
-    font-family: "Agency FB";
+    font-family: "Agency";
     font-weight: bold;
     font-style: normal;
-    src: url("../font/AGENCYB.TTF") format('truetype');
+    src: url("../font/agencyb.eot");
+    src: url("../font/agencyb.eot?#iefix") format('embedded-opentype'), url('../font/agencyb.otf') format('opentype'), url("../font/AGENCYB.TTF") format('truetype');
 }
 
 /*
@@ -90,7 +92,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Agency FB", serif;
+  font-family: "Agency FB", "Agency" , serif;
   font-size: 3.25rem;
 }
 
