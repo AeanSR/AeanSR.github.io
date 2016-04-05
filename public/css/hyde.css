@@ -44,7 +44,18 @@ html {
     font-size: 20px;
   }
 }
-
+@font-face {
+    font-family: "Agency FB";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../font/AGENCYR.TTF") format('truetype');
+}
+@font-face {
+    font-family: "Agency FB";
+    font-weight: bold;
+    font-style: normal;
+    src: url("../font/AGENCYB.TTF") format('truetype');
+}
 
 /*
  * Sidebar
@@ -79,7 +90,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  font-family: "Agency FB", serif;
   font-size: 3.25rem;
 }
 
