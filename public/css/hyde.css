@@ -48,15 +48,15 @@ html {
     font-family: "Agency";
     font-weight: normal;
     font-style: normal;
-    src: url("../font/agencyr.eot");
-    src: url("../font/agencyr.eot?#iefix") format('embedded-opentype'), url('../font/agencyr.otf') format('opentype'), url("../font/AGENCYR.TTF") format('truetype');
+    src: url("../../font/agencyr.eot");
+    src: url("../../font/agencyr.eot?#iefix") format('embedded-opentype'), url('../../font/agencyr.otf') format('opentype'), url("../../font/AGENCYR.TTF") format('truetype');
 }
 @font-face {
     font-family: "Agency";
     font-weight: bold;
     font-style: normal;
-    src: url("../font/agencyb.eot");
-    src: url("../font/agencyb.eot?#iefix") format('embedded-opentype'), url('../font/agencyb.otf') format('opentype'), url("../font/AGENCYB.TTF") format('truetype');
+    src: url("../../font/agencyb.eot");
+    src: url("../../font/agencyb.eot?#iefix") format('embedded-opentype'), url('../../font/agencyb.otf') format('opentype'), url("../../font/AGENCYB.TTF") format('truetype');
 }
 
 /*
