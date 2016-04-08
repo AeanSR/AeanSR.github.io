@@ -1,30 +1,30 @@
----
+﻿---
 layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+## Bio
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I am ZHAO Yongwei(赵永威), a first year grad student at [Institute of Computing Technology, Chinese Academy of Sciences](http://ict.ac.cn). My advisor is [Prof. Zhiwei Xu](http://novel.ict.ac.cn/zxu/).
 
-There are currently two themes built on Poole:
+Furthermore, I am widely known as "Aean" in World of Warcraft communities as a theorycrafter. "Aean" is my role-playing character in the game. I stopped my journey in WoW for pretty long time, but still contribute my theory, simulator and game guides to the community.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+I am just a beginner of science research. I did my undergraduate studies in Computer Science at [Huazhong University of Science and Technology](http://www.hust.edu.cn) during 2011 ~ 2015. Regardless of people's prejudice, I presented my theory about game policy optimizing as my undergraduate thesis, since I believe it is the genuine work which I have dedicated to it for several years. Today I am trying to take advantages of my prior works, to solve problems in formal analysis of systems and algorithms.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+My interests are including computer architectures, monte-carlo simulation, and artificial intelligence in game.
 
-## Setup
+## Projects
 
-Some fun facts about the setup of this project include:
+I always create pet projects for my own inspiration, and feels happy to share them with you. I am currently aiming at these projects:
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.org), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+* 2016 - [IreCore 2](https://github.com/AeanSR/irecore2), a refreshed implement for IreCore.
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+Something I built earlier, and still thinks as meaningful or memorable:
 
-Thanks for reading!
+* 2015 - [IreCore](https://sim.aean.net), a high performance WoW simulator (~20x faster than [SimC](https://github.com/simulationcraft/simc)).
+* 2015 - [EAGA](https://github.com/AeanSR/eaga)(Enhanced APLGA), a better implement for APLGA. This is part of my undergrad thesis.
+* 2014 - [APLGA](https://github.com/AeanSR/aplga)(Action Priority List Genetic Algorithm), an algorithm to find optimal policy for WoW damage dealers.
+* 2014 - [KalScope](http://aean.net/kalscope), a gomoku AI.
+
+Learn more on my [GitHub](https://github.com/AeanSR).
+
