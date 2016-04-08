@@ -5,7 +5,7 @@ title: About
 
 ## Bio
 
-I am ZHAO Yongwei(赵永威), a first year grad student at [Institute of Computing Technology, Chinese Academy of Sciences](http://ict.ac.cn). My advisor is [Prof. Zhiwei Xu](http://novel.ict.ac.cn/zxu/).
+I am ZHAO Yongwei(赵永威), a first year grad student at [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn). My advisor is [Prof. Zhiwei Xu](http://novel.ict.ac.cn/zxu/).
 
 Furthermore, I am widely known as "Aean" in World of Warcraft communities as a theorycrafter. "Aean" is my role-playing character in the game. I stopped my journey in WoW for pretty long time, but still contribute my theory, simulator and game guides to the community.
 
