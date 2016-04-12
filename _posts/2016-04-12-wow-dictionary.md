@@ -15,6 +15,6 @@ However it is hard to split chinese words. Billions of chinese Ph.D students gra
 
 I extracted all strings from DBC and filtered out zhCN corpus. Then implemented [this](http://www.matrix67.com/blog/archives/5044) algorithm.
 
-The dictionary I got is ok for me. There are still garbage words in it, but rare. Some words are filtered out because they are rarely used in tooltips, e.g. "ÁÅ∞Ë∞∑"(_Ashenvale_, I'm really unhappy about this :X).
+The dictionary I got is ok for me. There are still garbage words in it, but rare. Some words are filtered out because they are rarely used in tooltips, e.g. "ª“π»"(_Ashenvale_, I'm really unhappy about this :X).
 
 I would make my dictionary extractor open when the bot is ready. If you are looking for the dictionary too, you could get it from my [github](https://github.com/AeanSR/wow_dict).
