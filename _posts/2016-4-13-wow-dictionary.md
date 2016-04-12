@@ -9,9 +9,9 @@ We are planning to build a patch note bot, to publish patch changes to the forum
 
 Compare between strings are just simple with dynamic programming. If you don't know how to do this [just read this slide](http://bioinfo.ict.ac.cn/~dbu/AlgorithmCourses/Lectures/Lec6-EditDistance.pdf). That algorithm works on the granularity of alphabets. To scale the granularity to words, we need to do word split before we start this algorithm.
 
-Split latin words is easy. It won't be more than ([5 lines of code](http://stackoverflow.com/questions/236129/split-a-string-in-c#adzerk342792211)).
+Split latin words is easy. It won't be more than [5 lines of code](http://stackoverflow.com/questions/236129/split-a-string-in-c#adzerk342792211).
 
-It is hard to split chinese words. Billions of chinese Ph.D students graduates each year, by spamming all kinds of word segmentation methods. We need a dictionary before doing word segmentation. A dictionary for WoW.
+However it is hard to split chinese words. Billions of chinese Ph.D students graduates each year, by spamming all kinds of word segmentation methods. We need a dictionary before doing word segmentation. A dictionary for WoW.
 
 I extracted all strings from DBC and filtered out zhCN corpus. Then implemented [this](http://www.matrix67.com/blog/archives/5044) algorithm.
 
