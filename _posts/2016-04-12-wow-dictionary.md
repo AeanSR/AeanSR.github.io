@@ -5,9 +5,9 @@ title: WoW Dictionary
 
 Did some study about NLP.
 
-We are planning to build a patch note bot, to publish patch changes to the forum automatically. I am working on the tooltips compare algorithm.
+We are planning to build a patch note bot, to publish patch changes to the forum automatically. I am working on the tooltips differences comparing algorithm.
 
-Compare between strings are just simple with dynamic programming. If you don't know how to do this [just read this slide](http://bioinfo.ict.ac.cn/~dbu/AlgorithmCourses/Lectures/Lec6-EditDistance.pdf). That algorithm works on the granularity of alphabets. To scale the granularity to words, we need to do word split before we start this algorithm.
+Compare differences between strings are just simple with dynamic programming. If you don't know how to do this [just read this slide](http://bioinfo.ict.ac.cn/~dbu/AlgorithmCourses/Lectures/Lec6-EditDistance.pdf). That algorithm works on the granularity of alphabets. To scale the granularity to words, we need to do word split before we start this algorithm.
 
 Split latin words is easy. It won't be more than [5 lines of code](http://stackoverflow.com/questions/236129/split-a-string-in-c#adzerk342792211).
 
