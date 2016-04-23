@@ -28,3 +28,8 @@ Something I built earlier, and still thinks as meaningful or memorable:
 
 Learn more on my [GitHub](https://github.com/AeanSR).
 
+## And a little notice...
+
+This blog is not for academic or serious things. I don't want to be so serious...
+
+It is just a memo or portfolio for my thoughts and works, sometimes even a common diary.
