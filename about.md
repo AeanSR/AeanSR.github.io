@@ -13,7 +13,7 @@ My interests are including computer architectures, and artificial intelligence i
 
 ## Engineering
 
-I am one of the two leading coders of the closed-source project *NGPF*, the compiler backend of Cambricon products. The project was started in September 2016 with my partner WANG Yuqing. We cooperated the first system design and implemented it in 3 months. WANG left the project group in June 2017 thus I took on the system design since then. I left the group in mid-2018, by the time when the project group has grown to 60+ engineers and independently became a new department of Cambricon Ltd. The system is still shipping with newest products, running on 1,000,000+ Huawei smartphones.
+I am one of the two leading coders of the closed-source project *NGPF*, the compiler backend of Cambricon products. The project was started in September 2016 with my partner WANG Yuqing. We cooperated the first system design and implemented it in 3 months. WANG left the project group in June 2017 thus I took on the system design since then. I left the group in mid-2018, by the time when the project group has grown to 60+ engineers and independently became a new department of Cambricon Ltd. The system is still shipping with newest products.
 
 ## Research
 
@@ -21,7 +21,7 @@ I have just finished my first research work *Fractal Machine Learning Computers*
 
 ## Legacy Projects
 
-I always create pet projects for my own inspiration, and feels happy to share them with you. These pets were built earlier but still memorable for me:
+I always create pet projects for my own inspiration, and feel happy to share them with you. These pets were built earlier but still memorable for me:
 
 * 2016 - [IreCore 2](https://github.com/AeanSR/irecore2), a refreshed implement for IreCore.
 * 2015 - [IreCore](https://sim.aean.net), a high performance WoW simulator (~20x faster than [SimC](https://github.com/simulationcraft/simc)).
@@ -36,3 +36,5 @@ Learn more on my [GitHub](https://github.com/AeanSR).
 This blog is not for academic or serious things. I don't want to be so serious...
 
 It is just a memo or portfolio for my thoughts and works, sometimes even a common diary.
+
+BTW, at this moment I am a big anti-fan of Blizzard Entertainment. I felt extremely offended and fooled and will not pay a cent to them anymore.
