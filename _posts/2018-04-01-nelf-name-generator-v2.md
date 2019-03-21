@@ -5,7 +5,7 @@ title: Nelf Name Generator V2
 
 ## Introduction
 
-I have made a name generator based on LSTM-LM in [2016 post](2016/07/27/nelf-name/generator/). The quality is ok for novel-writing, if you would like to spend some time to look for a satisfying name in the generated list.
+I have made a name generator based on LSTM-LM in [2016 post](http://aean.net/2016/07/27/nelf-name-generator/). The quality is ok for novel-writing, if you would like to spend some time to look for a satisfying name in the generated list.
 
 But considers the situation that you are designing a game to give unique names to every random NPCs, the quality of *Nelf Name Generator V1* can not meet the requirement without supervision.
 
@@ -70,4 +70,4 @@ The training data is extracted from a private server database of patch 7.35 (Tri
 |Tynytha|Syda|Illay|
 |Clyraste|Alareith|Csana|
 
-A list containing 64,000 generated names (possibly duplicated) is [here](ext/final_799999.txt). The left column is generated name, the right column is the evaluation given by discriminator. It may help naming new characters in creation colleagues.
+A list containing 64,000 generated names (possibly duplicated) is [here](http://aean.net/ext/final_799999.txt). The left column is generated name, the right column is the evaluation given by discriminator. It may help naming new characters in creation colleagues.
