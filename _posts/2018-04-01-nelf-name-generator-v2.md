@@ -5,7 +5,7 @@ title: Nelf Name Generator V2
 
 ## Introduction
 
-I have made a name generator based on LSTM-LM in [2016 post](http://aean.net/2016/07/27/nelf-name-generator/). The quality is ok for novel-writing if you would like to spend some time to look for a satisfying name in the generated list.
+I have made a name generator based on LSTM-LM in [the 2016 post](http://aean.net/2016/07/27/nelf-name-generator/). The quality is ok for novel-writing if you would like to spend some time to look for a satisfying name in the generated list.
 
 But considers the situation that you are designing a game to give unique names to every random NPCs, the quality of *Nelf Name Generator V1* cannot meet the requirement without supervision.
 
