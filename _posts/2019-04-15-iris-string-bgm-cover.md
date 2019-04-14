@@ -7,7 +7,7 @@ I am trying to cover a string BGM (深藏希望的悲伤, "The Grief with Deep H
 
 The original sound track is [here](http://music.163.com/dj?id=2056267351&userid=120051629).
 
-<iframe src="//music.163.com/outchain/player?type=3&id=2056267351&auto=0&height=66" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute;top:0;left:0; height: 100%; width: 100%;"> </iframe>
+<iframe src="//music.163.com/outchain/player?type=3&id=2056267351&auto=0&height=66" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=86 width=330> </iframe>
 
 <div style="clear:both;display:table;">
   <div style="float:left;width:50%;">
