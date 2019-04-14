@@ -18,7 +18,7 @@ The original sound track is [here](http://music.163.com/dj?id=2056267351&userid=
   </div>
 </div>
 
-I recorded the playback sound of the covered score.
+I recorded the playback sound of the covering score.
 
 <audio controls>
   <source src="/ext/深藏希望的悲伤-cover.mp3" type="audio/mpeg">
