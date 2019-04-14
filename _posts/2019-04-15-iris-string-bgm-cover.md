@@ -22,5 +22,5 @@ I recorded the playback sound of the covering score.
 
 <audio controls>
   <source src="/ext/深藏希望的悲伤-cover.mp3" type="audio/mpeg">
-  Click here: [MP3](ext/深藏希望的悲伤-cover.mp3)
+  Click here: <a href="ext/深藏希望的悲伤-cover.mp3">MP3</a>
 </audio>
