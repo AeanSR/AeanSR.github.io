@@ -7,7 +7,14 @@ I am trying to cover a string BGM (深藏希望的悲伤, "The Grief with Deep H
 
 The original sound track is [here](http://music.163.com/dj?id=2056267351&userid=120051629).
 
-<img src="ext/Iris-mp5-1.png" width="48%"><img src="ext/Iris-mp5-2.png" width="48%">
+<div class="row">
+  <div class="column">
+    <img src="ext/Iris-mp5-1.png" alt="page1" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="ext/Iris-mp5-2.png" alt="page2" style="width:100%">
+  </div>
+</div>
 
 I recorded the playback sound of the covered score.
 
