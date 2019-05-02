@@ -8,6 +8,7 @@ I have taken a look into [LSTM-RNN](http://karpathy.github.io/2015/05/21/rnn-eff
 I have built a name generator for Nelf female. Export all Nelf female NPC names from a private server database(Arkcore NG, 4.3.2), and delete last names and titles manually, just save all first names. There are 498 first names at total(maybe have few duplicates).
 
 Run a python script to generate a random sequence of 200,000 names as training data. Build a mini LSTM network with 2 layers, each has 1000 neurons, and a 50% drop rate after each layer.
+
 <button class="collapsible">Collapsed</button><div class="collapsible-content">
 <pre><code>
 name: "lstm_language_model"
