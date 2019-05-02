@@ -29,9 +29,11 @@
 /* Style the collapsible content. Note: hidden by default */
 .collapsible-content {
   padding: 0 18px;
-  display: none;
-  overflow: hidden;
   background-color: #c2d1e2;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
+
 
 
