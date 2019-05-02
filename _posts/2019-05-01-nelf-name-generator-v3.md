@@ -14,8 +14,17 @@ and pretrained models have been uploaded to [GitHub](https://github.com/AeanSR/N
 
 Online service is also available at [Server _Nighthaven_](https://nighthaven.aean.net/namegen).
 
-<div style="position:relative;padding-bottom:56.25%;background-color: white;height:0;"><iframe src="https://nighthaven.aean.net/namegen" scrolling="no" border="0" frameborder="no" framespacing="0" style="position:absolute;top:0;left:0; height: 100%; width: 100%;">
+<script type="text/javascript">
+                      function NameGenIFrameLoaded() {
+                          var iFrameID = document.getElementById('NameGenIFrame');
+                          if(iFrameID) {
+                                iFrameID.height = "";
+                                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+                          }   
+                      }
+                    </script>
+<iframe id="NameGenIFrame" src="https://nighthaven.aean.net/namegen" onload="NameGenIFrameLoaded()" scrolling="no" border="0" frameborder="no" framespacing="0" style="height: 300px; width: 100%;">
   <p>Your browser does not support iframes. Please visit [Server _Nighthaven_](https://nighthaven.aean.net/namegen) manually.</p>
-</iframe></div>
+</iframe>
 
 More races other than nelf are on the way.
