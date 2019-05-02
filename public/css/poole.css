@@ -217,10 +217,15 @@ td,
 th {
   padding: .25rem .5rem;
   border: 1px solid #e5e5e5;
+  background-color: #F7F8F9;
 }
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #EBF4FF;
+}
+thead tr td,
+thead tr th {
+  background-color: #83a6d1;
 }
 
 
