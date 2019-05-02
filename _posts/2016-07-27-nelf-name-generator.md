@@ -8,7 +8,8 @@ I have taken a look into [LSTM-RNN](http://karpathy.github.io/2015/05/21/rnn-eff
 I have built a name generator for Nelf female. Export all Nelf female NPC names from a private server database(Arkcore NG, 4.3.2), and delete last names and titles manually, just save all first names. There are 498 first names at total(maybe have few duplicates).
 
 Run a python script to generate a random sequence of 200,000 names as training data. Build a mini LSTM network with 2 layers, each has 1000 neurons, and a 50% drop rate after each layer.
-
+<button class="collapsible">Collapsed</button>
+<div class="collapsible-content">
 <pre><code>
 name: "lstm_language_model"
 layer {
@@ -145,6 +146,7 @@ layer {
   }
 }
 </code></pre>
+</div>
 
 While training, feed names as input and move names one character left as target output, i.e. input S-H-A-N-D-R-I-S, target H-A-N-D-R-I-S-'\n'. The network will learn to predict what the next character will most probably be according to the context above. And if we direct the network's predict output back to the input, the network will loops with its prediction and generate a list of names.
 
