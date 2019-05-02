@@ -16,6 +16,7 @@ Online service is also available at [Server _Nighthaven_](https://nighthaven.aea
 
 <script type="text/javascript">
                       function NameGenIFrameLoaded() {
+                          document.domain = "aean.net";
                           var iFrameID = document.getElementById('NameGenIFrame');
                           if(iFrameID) {
                                 iFrameID.height = "";
