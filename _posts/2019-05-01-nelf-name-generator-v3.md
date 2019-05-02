@@ -14,9 +14,9 @@ and pretrained models have been uploaded to [GitHub](https://github.com/AeanSR/N
 
 Online service is also available at [Server _Nighthaven_](https://nighthaven.aean.net/namegen).
 
+<script>document.domain = "aean.net";</script>
 <script type="text/javascript">
                       function NameGenIFrameLoaded() {
-                          document.domain = "aean.net";
                           var iFrameID = document.getElementById('NameGenIFrame');
                           if(iFrameID) {
                                 iFrameID.height = "";
