@@ -31,6 +31,8 @@ The training data is extracted from a private server database of patch 7.35 (Tri
 
 **Left**: Results from *LSTM-LM (Nelf Name Generator V1)*. **Middle**: Random names in the client, prepared by Blizzard. **Right**: Results from *WGAN-GP (Nelf Name Generator V2)*.
 
+<div><button class="collapsible">Collapsed</button><div class="collapsible-content">
+  
 |**LSTM-LM**|**Blizzard**|**WGAN-GP**|
 |---|---|---|
 |Liir|Aqulais|Alysna|
@@ -69,5 +71,7 @@ The training data is extracted from a private server database of patch 7.35 (Tri
 |Alilune|Belinna|Arlysea|
 |Tynytha|Syda|Illay|
 |Clyraste|Alareith|Csana|
+
+</div></div>
 
 A list containing 64,000 generated names (possibly duplicated) is [here](/ext/final_799999.txt). The left column is the generated names, the right column is the evaluation given by discriminator. It may help naming new characters in creation colleagues.
