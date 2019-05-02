@@ -33,6 +33,7 @@ The training data is extracted from a private server database of patch 7.35 (Tri
 
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
 <div markdown="1">
+  
 |**LSTM-LM**|**Blizzard**|**WGAN-GP**|
 |---|---|---|
 |Liir|Aqulais|Alysna|
@@ -71,6 +72,7 @@ The training data is extracted from a private server database of patch 7.35 (Tri
 |Alilune|Belinna|Arlysea|
 |Tynytha|Syda|Illay|
 |Clyraste|Alareith|Csana|
+
 </div>
 </div></div>
 
