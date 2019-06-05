@@ -24,18 +24,4 @@ layout: default
   </ul>
 </div>
 
-<div class="related">
-<script>document.domain = "aean.net";</script>
-<script type="text/javascript">
-                      function CommentIFrameLoaded() {
-                          var iFrameID = document.getElementById('CommentIFrame');
-                          if(iFrameID) {
-                                iFrameID.height = "";
-                                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-                          }   
-                      }
-                    </script>
-<iframe id="CommentIFrame" src="https://nighthaven.aean.net/comment{{ page.url }}" onload="CommentIFrameLoaded()" scrolling="no" border="0" frameborder="no" framespacing="0" style="height: 500px; width: 100%;">
-  <p>Your browser does not support iframes. You could visit the <a href="https://nighthaven.aean.net/comment{{ page.url }}">comment page</a>.</p>
-</iframe>
-</div>
+{% include comment.html %}
