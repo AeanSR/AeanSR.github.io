@@ -5,11 +5,15 @@ title: About
 
 ## Bio
 
-I am a postgrad student at [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn). My advisor is [Prof. XU Zhiwei](http://novel.ict.ac.cn/zxu/). Starting from 2015, I joined the research group of intelligence processor, led by [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) and [Prof. CHEN Tianshi](http://novel.ict.ac.cn/tchen). I have served as a software engineer in [Cambricon](http://www.cambricon.com) for several years and returned to scientific research in 2018.
+My name is ZHAO Yongwei (赵永威). I am a postgrad student at [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn). My advisor is [Prof. XU Zhiwei](http://novel.ict.ac.cn/zxu/). Starting from 2015, I joined the research group of intelligence processor, led by [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) and [Prof. CHEN Tianshi](http://novel.ict.ac.cn/tchen). I have served as a software engineer in [Cambricon](http://www.cambricon.com) for several years and returned to scientific research in 2018.
 
-Furthermore, I was widely known as "Aean" in World of Warcraft communities as a theorycrafter. The name is abbreviated from "Aeanderine", which is one of my role-playing character in the game. I have contributed many theories, simulators, game-guides to the community, mostly published at [National Geography of Azeroth](http://bbs.nga.cn/nuke.php?func=ucp&uid=9771319). I did my undergraduate studies in Computer Science at [Huazhong University of Science and Technology](http://www.hust.edu.cn) during 2011 ~ 2015. Regardless of people's prejudice, I presented my theory about game policy optimizing as my undergraduate thesis, since I believe it is the genuine work which I have dedicated to for several years. Today I am trying to take advantages of my prior works, to solve problems in the formal analysis of systems and algorithms.
+Until I joined a real research group, I was widely known as "Aean" in World of Warcraft communities as a theorycrafter. The name is abbreviated from "Aeanderine", which is one of my role-playing character in the game. I have contributed many theories, simulators, game-guides to the community, mostly published at [National Geography of Azeroth](http://bbs.nga.cn/nuke.php?func=ucp&uid=9771319). I did my undergraduate studies in Computer Science at [Huazhong University of Science and Technology](http://www.hust.edu.cn) during 2011 ~ 2015. Regardless of people's prejudice, I presented my theory about game policy optimizing as my undergraduate thesis, since I believe it is the genuine work which I have dedicated to for several years.
 
-My interests are including computer architectures, and artificial intelligence in games. Benefit from the experience of IreCore, I have a strong ability to build extremely fast simulators to implement a quick model of my work or to re-implement other's works, which has been a significant advantage for my research.
+BTW, at this moment I am a big anti-fan of Blizzard Entertainment. I felt extremely offended and fooled and will not pay a cent to them anymore.
+
+Today I am trying to take advantages of my prior works, to solve problems in the analysis of new architectures. My interests are including neural accelerator architectures, and artificial intelligence in games. Benefit from the experience of IreCore, I have a strong ability to build extremely fast simulators to implement a quick model of my work or to re-implement other's works, which has been a significant advantage for my research.
+
+I am an audiophile, a self-teaching beginner of piano performance and composing, and a fan of J. S. Bach.
 
 ## Engineering
 
@@ -17,7 +21,7 @@ I am one of the two leading coders of the closed-source project *NGPF*, the comp
 
 ## Research
 
-I have just finished my first research work *Fractal Machine Learning Computers*, which has been accepted by [ISCA 2019](https://iscaconf.org/isca2019/).
+* __Yongwei Zhao__, Zidong Du, Qi Guo, Shaoli Liu, Ling Li, Zhiwei Xu, Tianshi Chen, and Yunji Chen. 2019. *Cambricon-F: machine learning computers with fractal von neumann architecture*. In *Proceedings of the 46th International Symposium on Computer Architecture* __(ISCA '19)__. ACM, New York, NY, USA, 788-801. __[[DOI](https://doi.org/10.1145/3307650.3322226)][[PDF](https://nighthaven.aean.net/barn/Sollnstsa)]__
 
 ## Legacy Projects
 
@@ -37,4 +41,4 @@ This blog is not for academic or serious things. I don't want to be so serious..
 
 It is just a memo or portfolio for my thoughts and works, sometimes even a common diary.
 
-BTW, at this moment I am a big anti-fan of Blizzard Entertainment. I felt extremely offended and fooled and will not pay a cent to them anymore.
+
