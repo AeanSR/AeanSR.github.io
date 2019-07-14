@@ -13,7 +13,7 @@ BTW, at this moment I am a big anti-fan of Blizzard Entertainment. I felt extrem
 
 Today I am trying to take advantages of my prior works, to solve problems in the analysis of new architectures. My interests are including neural accelerator architectures, and artificial intelligence in games. Benefit from the experience of IreCore, I have a strong ability to build extremely fast simulators to implement a quick model of my work or to re-implement other's works, which has been a significant advantage for my research.
 
-I am an audiophile, a self-teaching beginner of piano performance and composing, and a fan of J. S. Bach.
+I am an audiophile, a self-teaching beginner of piano performance and composing, and a fan of J. S. Bach. I own a Senheisser HD800 headphone, an Oppo PM-2 headphone, a Prismsound Lyra 2 interface, a Goldwave GAX amplifier, and a Dexibell VIVO P7 digital piano.
 
 ## Engineering
 
