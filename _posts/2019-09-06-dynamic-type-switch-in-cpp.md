@@ -9,7 +9,7 @@ Compilers usually get loads of types of structs to be programmed. Every syntax e
 A piece of syntax element definitions is shown below.
 
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
-
+<pre><code>
     // ...
     
     struct unary_t : public ast_node_t {
@@ -80,7 +80,7 @@ A piece of syntax element definitions is shown below.
     };
     
     // ...
-
+</code></pre>
 </div></div>
 
 Each derived class has its own `_parse` function, which is short and brief. In this example,
@@ -92,7 +92,6 @@ the class definition of AST nodes, mixed in the definition of syntaxes.
 
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
 <pre><code>
-
 struct unary_t : public ast_node_t {
   std::shared_ptr<unaryexpr_t> lhs;                                                                                    
   int type; 
@@ -166,7 +165,6 @@ struct castexpr_t : public ast_node_t {
 };
 
 //...
-
 </code></pre>
 </div></div>
 
