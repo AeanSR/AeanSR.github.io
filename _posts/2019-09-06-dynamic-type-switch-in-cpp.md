@@ -13,7 +13,7 @@ A piece of syntax element definitions is shown below.
     // ...
     
     struct unary_t : public ast_node_t {
-      std::shared_ptr<unaryexpr_t> lhs;                                                                                    
+      std::shared_ptr&lt;unaryexpr_t> lhs;                                                                                    
       int type; 
       enum { INC, DEC, PROD, ALL, POS, NEG, NOT, REV, ANY, SIZEOF, TYPEOF };                                               
 
@@ -33,8 +33,8 @@ A piece of syntax element definitions is shown below.
     };
     
     struct castexpr_t : public ast_node_t {
-      std::shared_ptr<unaryexpr_t> unary;
-      std::shared_ptr<cast_t> cast;
+      std::shared_ptr&lt;unaryexpr_t> unary;
+      std::shared_ptr&lt;cast_t> cast;
     
       virtual bool _parse() {
         return expect(cast) || expect(unary);
@@ -42,8 +42,8 @@ A piece of syntax element definitions is shown below.
     };
     
     struct cast_t : public ast_node_t {
-      std::shared_ptr<castexpr_t> lhs;
-      std::shared_ptr<type_t> type;
+      std::shared_ptr&lt;castexpr_t> lhs;
+      std::shared_ptr&lt;type_t> type;
     
       virtual bool _parse() {
         return guard(expect_punc("(") && expect(type) && expect_punc(")") && expect(lhs));
@@ -51,8 +51,8 @@ A piece of syntax element definitions is shown below.
     };
     
     struct mulexpr_t : public ast_node_t {
-      std::shared_ptr<castexpr_t> cast;
-      std::shared_ptr<mul_t> mul;
+      std::shared_ptr&lt;castexpr_t> cast;
+      std::shared_ptr&lt;mul_t> mul;
     
       virtual bool _parse() {
         return expect(mul) || expect(cast);
@@ -60,8 +60,8 @@ A piece of syntax element definitions is shown below.
     };
     
     struct mul_t : public ast_node_t {
-      std::shared_ptr<mulexpr_t> lhs;
-      std::shared_ptr<castexpr_t> rhs;
+      std::shared_ptr&lt;mulexpr_t> lhs;
+      std::shared_ptr&lt;castexpr_t> rhs;
       int type;
       enum { MUL, DIV, MOD };
     
@@ -71,8 +71,8 @@ A piece of syntax element definitions is shown below.
     };
     
     struct addexpr_t : public ast_node_t {
-      std::shared_ptr<mulexpr_t> mul;
-      std::shared_ptr<add_t> add;
+      std::shared_ptr&lt;mulexpr_t> mul;
+      std::shared_ptr&lt;add_t> add;
     
       virtual bool _parse() {
         return expect(add) || expect(mul);
