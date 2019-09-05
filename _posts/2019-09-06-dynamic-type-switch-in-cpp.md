@@ -5,7 +5,7 @@ title: Dynamic Type Switch in C++
 
 I recently worked on a compiler in a research project.
 
-Compilers usually get loads of types of structs to be programmed. Every syntax elements and IRs got their class.
+Compilers usually get massive types of structs to be programmed. Every syntax elements and IRs got their class.
 A piece of syntax element definitions is shown below.
 
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
