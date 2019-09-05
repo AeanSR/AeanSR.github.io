@@ -10,6 +10,7 @@ A piece of syntax element definitions is shown below.
 
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
 <pre><code>
+
 // ...
 
 struct unary_t : public ast_node_t {
@@ -80,6 +81,7 @@ struct addexpr_t : public ast_node_t {
 };
 
 // ...
+
 </code></pre>
 </div></div>
 
@@ -92,6 +94,7 @@ the class definition of AST nodes, mixed in the definition of syntaxes.
 
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
 <pre><code>
+
 struct unary_t : public ast_node_t {
   std::shared_ptr<unaryexpr_t> lhs;                                                                                    
   int type; 
@@ -164,7 +167,8 @@ struct castexpr_t : public ast_node_t {
   }
 };
 
-...
+//...
+
 </code></pre>
 </div></div>
 
@@ -288,6 +292,7 @@ the code will be expanded as:
 
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
 <pre><code>
+
       std::unordered_map<std::type_index, std::function<Ret(std::shared_ptr<Base>)>> _case_map {
         {
           std::type_index(typeid(foo_t)),
@@ -319,6 +324,7 @@ the code will be expanded as:
           )
         }
       };
+
 </code></pre>
 </div></div>
 
