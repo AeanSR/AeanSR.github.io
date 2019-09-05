@@ -133,7 +133,7 @@ struct unary_t : public ast_node_t {
       ast->error() &lt;&lt; "prefix unary operator " &lt;&lt; std::get&lt;1>(oplut[type]) &lt;&lt; " does not accept operand of type " &lt;&lt; lhs->type->name() &lt;&lt; "." &lt;&lt; eol();
       lhs->type->note() &lt;&lt; "type defined from here:" &lt;&lt; lhs->type->eol();                                              
     }  
-    if (lhs->type->external && lhs->type is typeid(symbol_vec_type_t) && !(opcode in std::set<int>{symbol_unary_t::SIZEOF, symbol_unary_t::TYPEOF})) {
+    if (lhs->type->external && lhs->type is typeid(symbol_vec_type_t) && !(opcode in std::set&lt;int>{symbol_unary_t::SIZEOF, symbol_unary_t::TYPEOF})) {
       error() &lt;&lt; "extern vector must be explicitly moved to intern variables before participating operations." &lt;&lt; eol();                                                                                                            
       lhs->type->note() &lt;&lt; "type defined from here:" &lt;&lt; lhs->type->eol();                                              
     }                                                                                                                  
