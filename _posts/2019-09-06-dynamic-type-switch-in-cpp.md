@@ -93,7 +93,7 @@ the class definition of AST nodes, mixed in the definition of syntaxes.
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
 <pre><code>
 struct unary_t : public ast_node_t {
-  std::shared_ptr<unaryexpr_t> lhs;                                                                                    
+  std::shared_ptr&lt;unaryexpr_t> lhs;                                                                                    
   int type; 
   enum { INC, DEC, PROD, ALL, POS, NEG, NOT, REV, ANY, SIZEOF, TYPEOF };                                               
 
@@ -112,8 +112,8 @@ struct unary_t : public ast_node_t {
   }
   
   virtual symbol_t::ptr _analysis() {                                                                   
-    auto lhs = lhs->analysis()->to<symbol_val_t>();                                                                     
-    std::vector<std::tuple<int, std::string, bool>> oplut {                                                            
+    auto lhs = lhs->analysis()->to&lt;symbol_val_t>();                                                                     
+    std::vector&lt;std::tuple&lt;int, std::string, bool>> oplut {
       { symbol_unary_t::INC, "++"s, true },                                                                            
       { symbol_unary_t::DEC, "--"s, true },
       { symbol_unary_t::PROD, "*"s, true },                                                                            
@@ -126,34 +126,34 @@ struct unary_t : public ast_node_t {
       { symbol_unary_t::SIZEOF, "sizeof"s, true },                                                                     
       { symbol_unary_t::TYPEOF, "typeof"s, true },
     }; 
-    int opcode = std::get<0>(oplut[type]);                                                                        
-    if (!std::get<2>(oplut[type])) {                                                                              
-      error() << "prefix unary operator " << std::get<1>(oplut[type]) << " is not implemented." << eol();      
+    int opcode = std::get&lt;0>(oplut[type]);                                                                        
+    if (!std::get&lt;2>(oplut[type])) {                                                                              
+      error() &lt;&lt; "prefix unary operator " &lt;&lt; std::get&lt;1>(oplut[type]) &lt;&lt; " is not implemented." &lt;&lt; eol();      
     } else if (!symbol_unary_t::op_accept(lhs->type, opcode)) {                                                        
-      ast->error() << "prefix unary operator " << std::get<1>(oplut[type]) << " does not accept operand of type " << lhs->type->name() << "." << eol();
-      lhs->type->note() << "type defined from here:" << lhs->type->eol();                                              
+      ast->error() &lt;&lt; "prefix unary operator " &lt;&lt; std::get&lt;1>(oplut[type]) &lt;&lt; " does not accept operand of type " &lt;&lt; lhs->type->name() &lt;&lt; "." &lt;&lt; eol();
+      lhs->type->note() &lt;&lt; "type defined from here:" &lt;&lt; lhs->type->eol();                                              
     }  
     if (lhs->type->external && lhs->type is typeid(symbol_vec_type_t) && !(opcode in std::set<int>{symbol_unary_t::SIZEOF, symbol_unary_t::TYPEOF})) {
-      error() << "extern vector must be explicitly moved to intern variables before participating operations." << eol();                                                                                                            
-      lhs->type->note() << "type defined from here:" << lhs->type->eol();                                              
+      error() &lt;&lt; "extern vector must be explicitly moved to intern variables before participating operations." &lt;&lt; eol();                                                                                                            
+      lhs->type->note() &lt;&lt; "type defined from here:" &lt;&lt; lhs->type->eol();                                              
     }                                                                                                                  
     auto rvck = [&,this](symbol_val_t::ptr opr) {                                                                           
       if (opr->rvvalue()) {
-        error() << "expression do not accept rv-value. convert to lvalue by assignment first." << eol();     
-        opr->type->note() << "type defined from here:" << opr->type->eol();
+        error() &lt;&lt; "expression do not accept rv-value. convert to lvalue by assignment first." &lt;&lt; eol();     
+        opr->type->note() &lt;&lt; "type defined from here:" &lt;&lt; opr->type->eol();
       } return 0;
     };
-    if (opcode in std::set<int>{symbol_unary_t::PROD, symbol_unary_t::ALL,
+    if (opcode in std::set&lt;int>{symbol_unary_t::PROD, symbol_unary_t::ALL,
                                 symbol_unary_t::POS, symbol_unary_t::ANY})
       rvck(lhs);
-    return std::make_shared<symbol_unary_t>(ast, lhs, opcode);
+    return std::make_shared&lt;symbol_unary_t>(ast, lhs, opcode);
   }
   
 };
 
 struct castexpr_t : public ast_node_t {
-  std::shared_ptr<unaryexpr_t> unary;
-  std::shared_ptr<cast_t> cast;
+  std::shared_ptr&lt;unaryexpr_t> unary;
+  std::shared_ptr&lt;cast_t> cast;
 
   virtual bool _parse() {
     return expect(cast) || expect(unary);
@@ -289,33 +289,33 @@ the code will be expanded as:
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
 <pre><code>
 
-      std::unordered_map<std::type_index, std::function<Ret(std::shared_ptr<Base>)>> _case_map {
+      std::unordered_map&lt;std::type_index, std::function&lt;Ret(std::shared_ptr<Base>)>> _case_map {
         {
           std::type_index(typeid(foo_t)),
-          std::function<Ret(std::shared_ptr<Base>)>(
-            [=](std::shared_ptr<Base> fwd) {
-              return (*a)(std::dynamic_pointer_cast<foo_t>(fwd));
+          std::function&lt;Ret(std::shared_ptr&lt;Base>)>(
+            [=](std::shared_ptr&lt;Base> fwd) {
+              return (*a)(std::dynamic_pointer_cast&lt;foo_t>(fwd));
             }
           )
         },{
           std::type_index(typeid(bar_t)),
-          std::function<Ret(std::shared_ptr<Base>)>(
-            [=](std::shared_ptr<Base> fwd) {
-              return (*b)(std::dynamic_pointer_cast<bar_t>(fwd));
+          std::function&lt;Ret(std::shared_ptr&lt;Base>)>(
+            [=](std::shared_ptr&lt;Base> fwd) {
+              return (*b)(std::dynamic_pointer_cast&lt;bar_t>(fwd));
             }
           )
         },{
           std::type_index(typeid(buz_t)),
-          std::function<Ret(std::shared_ptr<Base>)>(
-            [=](std::shared_ptr<Base> fwd) {
-              return (*c)(std::dynamic_pointer_cast<buz_t>(fwd));
+          std::function&lt;Ret(std::shared_ptr&lt;Base>)>(
+            [=](std::shared_ptr&lt;Base> fwd) {
+              return (*c)(std::dynamic_pointer_cast&lt;buz_t>(fwd));
             }
           )
         },{
           std::type_index(typeid(qux_t)),
-          std::function<Ret(std::shared_ptr<Base>)>(
-            [=](std::shared_ptr<Base> fwd) {
-              return (*d)(std::dynamic_pointer_cast<qux_t>(fwd));
+          std::function&lt;Ret(std::shared_ptr&lt;Base>)>(
+            [=](std::shared_ptr&lt;Base> fwd) {
+              return (*d)(std::dynamic_pointer_cast&lt;qux_t>(fwd));
             }
           )
         }
