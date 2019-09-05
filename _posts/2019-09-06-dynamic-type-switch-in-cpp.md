@@ -9,80 +9,78 @@ Compilers usually get loads of types of structs to be programmed. Every syntax e
 A piece of syntax element definitions is shown below.
 
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
-<pre><code>
 
-// ...
+    // ...
+    
+    struct unary_t : public ast_node_t {
+      std::shared_ptr<unaryexpr_t> lhs;                                                                                    
+      int type; 
+      enum { INC, DEC, PROD, ALL, POS, NEG, NOT, REV, ANY, SIZEOF, TYPEOF };                                               
 
-struct unary_t : public ast_node_t {
-  std::shared_ptr<unaryexpr_t> lhs;                                                                                    
-  int type; 
-  enum { INC, DEC, PROD, ALL, POS, NEG, NOT, REV, ANY, SIZEOF, TYPEOF };                                               
+      virtual bool _parse() {
+        return guard([&](){
+          if (expect_multipuncs(type, INC, "++", "--", "*", "&", "+", "-", "!", "~", "|")) {                               
+            return expect(lhs);
+          } else if (expect_key("sizeof")) {                                                                               
+            type = SIZEOF;
+            return expect(lhs);
+          } else if (expect_key("typeof")) {                                                                               
+            type = TYPEOF;
+            return expect(lhs);
+          } else return false;                                                                                             
+        }());                                                                                                              
+      }
+    };
+    
+    struct castexpr_t : public ast_node_t {
+      std::shared_ptr<unaryexpr_t> unary;
+      std::shared_ptr<cast_t> cast;
+    
+      virtual bool _parse() {
+        return expect(cast) || expect(unary);
+      }
+    };
+    
+    struct cast_t : public ast_node_t {
+      std::shared_ptr<castexpr_t> lhs;
+      std::shared_ptr<type_t> type;
+    
+      virtual bool _parse() {
+        return guard(expect_punc("(") && expect(type) && expect_punc(")") && expect(lhs));
+      }
+    };
+    
+    struct mulexpr_t : public ast_node_t {
+      std::shared_ptr<castexpr_t> cast;
+      std::shared_ptr<mul_t> mul;
+    
+      virtual bool _parse() {
+        return expect(mul) || expect(cast);
+      }
+    };
+    
+    struct mul_t : public ast_node_t {
+      std::shared_ptr<mulexpr_t> lhs;
+      std::shared_ptr<castexpr_t> rhs;
+      int type;
+      enum { MUL, DIV, MOD };
+    
+      virtual bool _parse() {
+        return left_aggregate(mul, cast, expect_multipuncs(type, MUL, "*", "/", "%"));
+      }
+    };
+    
+    struct addexpr_t : public ast_node_t {
+      std::shared_ptr<mulexpr_t> mul;
+      std::shared_ptr<add_t> add;
+    
+      virtual bool _parse() {
+        return expect(add) || expect(mul);
+      }
+    };
+    
+    // ...
 
-  virtual bool _parse() {
-    return guard([&](){
-      if (expect_multipuncs(type, INC, "++", "--", "*", "&", "+", "-", "!", "~", "|")) {                               
-        return expect(lhs);
-      } else if (expect_key("sizeof")) {                                                                               
-        type = SIZEOF;
-        return expect(lhs);
-      } else if (expect_key("typeof")) {                                                                               
-        type = TYPEOF;
-        return expect(lhs);
-      } else return false;                                                                                             
-    }());                                                                                                              
-  }
-};
-
-struct castexpr_t : public ast_node_t {
-  std::shared_ptr<unaryexpr_t> unary;
-  std::shared_ptr<cast_t> cast;
-
-  virtual bool _parse() {
-    return expect(cast) || expect(unary);
-  }
-};
-
-struct cast_t : public ast_node_t {
-  std::shared_ptr<castexpr_t> lhs;
-  std::shared_ptr<type_t> type;
-
-  virtual bool _parse() {
-    return guard(expect_punc("(") && expect(type) && expect_punc(")") && expect(lhs));
-  }
-};
-
-struct mulexpr_t : public ast_node_t {
-  std::shared_ptr<castexpr_t> cast;
-  std::shared_ptr<mul_t> mul;
-
-  virtual bool _parse() {
-    return expect(mul) || expect(cast);
-  }
-};
-
-struct mul_t : public ast_node_t {
-  std::shared_ptr<mulexpr_t> lhs;
-  std::shared_ptr<castexpr_t> rhs;
-  int type;
-  enum { MUL, DIV, MOD };
-
-  virtual bool _parse() {
-    return left_aggregate(mul, cast, expect_multipuncs(type, MUL, "*", "/", "%"));
-  }
-};
-
-struct addexpr_t : public ast_node_t {
-  std::shared_ptr<mulexpr_t> mul;
-  std::shared_ptr<add_t> add;
-
-  virtual bool _parse() {
-    return expect(add) || expect(mul);
-  }
-};
-
-// ...
-
-</code></pre>
 </div></div>
 
 Each derived class has its own `_parse` function, which is short and brief. In this example,
