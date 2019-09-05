@@ -369,6 +369,6 @@ You will get the promoted pointer as the lambda parameter.
 
 The [unary `+` operator](https://stackoverflow.com/questions/18889028/a-positive-lambda-what-sorcery-is-this) will convert the pure-lambda to a function pointer, as expected in the type deduction of `Ret` and `Args` in `type_switch`.
 
-This magic looks far briefer than cascading `if`s. However, everything has its price. It runs ~30% slower than cascading `if`s. It is harder to implement. And most critically, [GCC before 8.1.0 doesn't like it](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=47226).
+This magic looks far briefer than cascading `if`s. However, everything has its price. It runs ~30% slower than cascading `if`s on the `foo_t/bar_t/buz_t/qux_t` sample shown here (although the overhead of `type_switch` should be constant, while cascading `if`s may have linear overheads). It is harder to implement. And most critically, [GCC before 8.1.0 doesn't like it](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=47226).
 
 According to your demands, it can be expanded further to be more flexible, e.g. a `default` statement, or enabling captures instead of pure-lambdas for each case routine. I will leave it here just as it is.
