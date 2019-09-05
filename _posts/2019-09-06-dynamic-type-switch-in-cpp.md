@@ -175,7 +175,7 @@ information of a given AST node pointer.
 
     int acc = 0;
     switch([The runtime type of *p]) {
-      case [type foo_t]: [upgrade p to point to a derived class] {
+      case [type foo_t]: [promote p to point to a derived class] {
         p->a++;            // access the derived class members of *p.
         acc += p->a + 0;   // return results out of the switch statement.
       } break;
@@ -231,11 +231,11 @@ I made my solution, which must requires no extra codes whenever I use it.
     
     template<class Base, class Ret, class... Args>
     Ret type_switch(std::shared_ptr<Base> obj, Ret(*...args)(std::shared_ptr<Args>)) {
-      std::unordered_map<std::type_index, std::function<Ret(std::shared_ptr<Base>)>> _case_map {
+      static std::unordered_map<std::type_index, std::function<Ret(std::shared_ptr<Base>)>> _case_map {
         {
           std::type_index(typeid(Args)),
           std::function<Ret(std::shared_ptr<Base>)>(
-            [=](std::shared_ptr<Base> fwd) {
+            [&](std::shared_ptr<Base> fwd) {
               return (*args)(std::dynamic_pointer_cast<Args>(fwd));
             }
           )
@@ -262,7 +262,7 @@ forming a function-pointer type `Ret(*)(std::shared_ptr<Args>)`.
 Since `Ret` is a template-parameter but `Args` is a template-parameter-pack, each argument in the parameter pack `args` may have different type `Args`, but must have the same type `Ret`.
 `args` are switched functions to be invoked for each derived class `Args`.
 
-    std::unordered_map<std::type_index, std::function<Ret(std::shared_ptr<Base>)>> _case_map
+    static std::unordered_map<std::type_index, std::function<Ret(std::shared_ptr<Base>)>> _case_map
 
 In the function body, we will build a map from type indexes of the derived class to the functions to be invoked.
 The key of `_case_map` will be of type `std::type_index`, which will be probed from `typeid(*obj)` to differentiate runtime derived classes under the given pointer of base `obj`.
@@ -276,7 +276,7 @@ The ellipsis will find the expression just before it, which will be a braced-ini
         {
           std::type_index(typeid(Args)),
           std::function<Ret(std::shared_ptr<Base>)>(
-            [=](std::shared_ptr<Base> fwd) {
+            [&](std::shared_ptr<Base> fwd) {
               return (*args)(std::dynamic_pointer_cast<Args>(fwd));
             }
           )
@@ -289,32 +289,32 @@ the code will be expanded as:
 <div><button class="collapsible">Collapsed</button><div class="collapsible-content">
 <pre><code>
 
-      std::unordered_map&lt;std::type_index, std::function&lt;Ret(std::shared_ptr<Base>)>> _case_map {
+      static std::unordered_map&lt;std::type_index, std::function&lt;Ret(std::shared_ptr<Base>)>> _case_map {
         {
           std::type_index(typeid(foo_t)),
           std::function&lt;Ret(std::shared_ptr&lt;Base>)>(
-            [=](std::shared_ptr&lt;Base> fwd) {
+            [&](std::shared_ptr&lt;Base> fwd) {
               return (*a)(std::dynamic_pointer_cast&lt;foo_t>(fwd));
             }
           )
         },{
           std::type_index(typeid(bar_t)),
           std::function&lt;Ret(std::shared_ptr&lt;Base>)>(
-            [=](std::shared_ptr&lt;Base> fwd) {
+            [&](std::shared_ptr&lt;Base> fwd) {
               return (*b)(std::dynamic_pointer_cast&lt;bar_t>(fwd));
             }
           )
         },{
           std::type_index(typeid(buz_t)),
           std::function&lt;Ret(std::shared_ptr&lt;Base>)>(
-            [=](std::shared_ptr&lt;Base> fwd) {
+            [&](std::shared_ptr&lt;Base> fwd) {
               return (*c)(std::dynamic_pointer_cast&lt;buz_t>(fwd));
             }
           )
         },{
           std::type_index(typeid(qux_t)),
           std::function&lt;Ret(std::shared_ptr&lt;Base>)>(
-            [=](std::shared_ptr&lt;Base> fwd) {
+            [&](std::shared_ptr&lt;Base> fwd) {
               return (*d)(std::dynamic_pointer_cast&lt;qux_t>(fwd));
             }
           )
@@ -330,7 +330,7 @@ Since each lambda object will have its unique type, it must be wrapped if we wan
 
           std::function<Ret(std::shared_ptr<Base>)>(
           
-            [=](std::shared_ptr<Base> fwd) {
+            [&](std::shared_ptr<Base> fwd) {
               return (*args)(std::dynamic_pointer_cast<Args>(fwd));
             }
             
@@ -338,6 +338,8 @@ Since each lambda object will have its unique type, it must be wrapped if we wan
 
 The lambda is capturing `args` (after expansion), then dereferencing it from a function-pointer (`Ret(*args)(std::shared_ptr<Args>)`) to a function (`Ret args(std::shared_ptr<Args>)`),
 then invoke it with an argument `std::dynamic_pointer_cast<Args>(fwd)` which will do the pointer promotion for us thus we don't bother writing the second `dynamic_pointer_cast` for each case label.
+
+Since we only need to build the map once for the whole program lifecycle (the types in `Args` are compile-time known), we marks the storage property of `_case_map` as `static`.
 
     return _case_map[std::type_index(typeid(*obj))](obj);
     
@@ -367,6 +369,6 @@ You will get the promoted pointer as the lambda parameter.
 
 The [unary `+` operator](https://stackoverflow.com/questions/18889028/a-positive-lambda-what-sorcery-is-this) will convert the pure-lambda to a function pointer, as expected in the type deduction of `Ret` and `Args` in `type_switch`.
 
-This magic looks far briefer than cascading `if`s. However, everything has its price. It runs 10x slower than cascading `if`s. It is harder to implement. And most critically, [GCC before 8.1.0 doesn't like it](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=47226).
+This magic looks far briefer than cascading `if`s. However, everything has its price. It runs ~30% slower than cascading `if`s. It is harder to implement. And most critically, [GCC before 8.1.0 doesn't like it](https://gcc.gnu.org/bugzilla/show_bug.cgi?id=47226).
 
 According to your demands, it can be expanded further to be more flexible, e.g. a `default` statement, or enabling captures instead of pure-lambdas for each case routine. I will leave it here just as it is.
