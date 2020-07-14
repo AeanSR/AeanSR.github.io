@@ -14,8 +14,8 @@ Today I am an assistant professor of ICT, CAS. My research interests are includi
 <style>
     th { display: none; }
     td { font-size: 14px; }
-    s { color: #772D80; }
-    em { font-size: 20px; font-style: italic; }
+    del { text-decoration:none; color: #772D80; }
+    em { font-size: 20px; font-style: italic; font-weight: bold; }
 </style>
 | | | |
 | :-------------: | :---------- | :----------- |
