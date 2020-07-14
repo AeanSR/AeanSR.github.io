@@ -5,7 +5,7 @@ title: About
 
 ## Bio
 
-I am ZHAO Yongwei (赵永威). I recieved Ph.D. degree from [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn) in 2020. My advisor is [Prof. XU Zhiwei](http://novel.ict.ac.cn/zxu/), and [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) in common. Starting from 2015, I joined the research group of intelligence processor, led by [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) and [Prof. CHEN Tianshi](http://novel.ict.ac.cn/tchen). I have also served as a software engineer in [Cambricon](http://www.cambricon.com) for several years.
+I am ZHAO Yongwei (赵永威). I recieved doctor's degree from [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn) in 2020. My advisor is [Prof. XU Zhiwei](http://novel.ict.ac.cn/zxu/), and [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) in common. Starting from 2015, I joined the research group of intelligence processor, led by [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) and [Prof. CHEN Tianshi](http://novel.ict.ac.cn/tchen). I am one of two Special Scholarship of the Director (XIA Peisu Scholarship) winners in 2019, and selected for the Special Research Assistant Funding Project in 2020.
 
 Today I am an assistant professor of ICT, CAS. My research interests are including accelerator architectures and neural-symbolic system. 
 
@@ -26,7 +26,7 @@ Today I am an assistant professor of ICT, CAS. My research interests are includi
 
 ## Engineering
 
-I am one of the two leading coders of the closed-source project *NGPF*, the compiler backend of Cambricon products. The project was started in September 2016 with my partner WANG Yuqing. We cooperated the first project design and implemented it in 3 months. WANG left the project group in June 2017 thus I took on the project design since then. I left the group in mid-2018, by the time when the project group has grown to 60+ engineers and independently became a new department of Cambricon Ltd.
+I have also served as a software engineer and architect in [Cambricon](http://www.cambricon.com) for several years. I am one of the two leading coders of the closed-source project *NGPF*, the compiler backend of Cambricon products. The project was started in September 2016 with my partner WANG Yuqing. We cooperated the first project design and implemented it in 3 months. WANG left the project group in June 2017 thus I took on the project design since then. I left the group in mid-2018, by the time when the project group has grown to 60+ engineers and independently became a new department of Cambricon Ltd.
 
 The project is still shipping with the newest products. This project was shipped with Huawei Kirin 970/980 processors. If you have a Mate10 / Mate20 phone, there are my code running in the background :D
 
@@ -38,7 +38,7 @@ Today I am trying to take advantages of my prior experiences to solve problems i
 
 ## Legacy Projects
 
-I always create pet projects for my own inspiration and feel happy to share them with you. These pets were built earlier but still memorable for me:
+I always create pet projects for my own inspiration and feel happy to share them with you. These pets were built far earlier but still memorable for me:
 
 * 2016 - [IreCore 2](https://github.com/AeanSR/irecore2), a refreshed implement for IreCore.
 * 2015 - [IreCore](https://sim.aean.net), a high performance WoW simulator (~20x faster than [SimC](https://github.com/simulationcraft/simc)).
@@ -48,4 +48,8 @@ I always create pet projects for my own inspiration and feel happy to share them
 
 Learn more on my [GitHub](https://github.com/AeanSR).
 
+## Contact
 
+Contact me via v#aean.net (personal) or zhaoyongwei#ict.ac.cn (academic).
+
+Last Updated: 2020/7/15
