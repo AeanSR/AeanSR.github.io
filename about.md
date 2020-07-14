@@ -5,7 +5,7 @@ title: About
 
 ## Bio
 
-I am ZHAO Yongwei (赵永威). I recieved doctor's degree from [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn) in 2020. My advisor is [Prof. XU Zhiwei](http://novel.ict.ac.cn/zxu/), and [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) in common. Starting from 2015, I joined the research group of intelligence processor, led by [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) and [Prof. CHEN Tianshi](http://novel.ict.ac.cn/tchen). I am one of two Special Scholarship of the Director (XIA Peisu Scholarship) winners in 2019, and selected for the Special Research Assistant Funding Project in 2020.
+I am ZHAO Yongwei (赵永威). I recieved doctor's degree from [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn) in 2020. My advisor is [Prof. XU Zhiwei](http://novel.ict.ac.cn/zxu/), and [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) in common. Starting from 2015, I joined the research group of intelligence processor, led by [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) and [Prof. CHEN Tianshi](http://novel.ict.ac.cn/tchen). I am one of the two Special Scholarship of the Director (the XIA Peisu Scholarship) winners in 2019, and selected for the Special Research Assistant Funding Project in 2020.
 
 Today I am an assistant professor of ICT, CAS. My research interests are including accelerator architectures and neural-symbolic system. 
 
