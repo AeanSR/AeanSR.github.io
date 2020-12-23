@@ -5,7 +5,7 @@ title: About
 
 ## Bio
 
-I am ZHAO Yongwei (赵永威). I recieved doctor's degree from [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn) in 2020. My advisor is [Prof. XU Zhiwei](http://novel.ict.ac.cn/zxu/), and [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) in common. Starting from 2015, I joined the research group of intelligence processor, led by [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) and [Prof. CHEN Tianshi](http://novel.ict.ac.cn/tchen). I am one of the two winners of the Special Scholarship of the Director, ICT (the XIA Peisu Scholarship), in 2019, one of the winner of the Excellent Scholarship of the President, CAS, in 2020, and selected for the Special Research Assistant Funding Project in 2020.
+I am ZHAO Yongwei (赵永威). I recieved Ph.D. degree from [Institute of Computing Technology, Chinese Academy of Sciences](http://www.ict.ac.cn) in 2020. My advisor is [Prof. XU Zhiwei](http://novel.ict.ac.cn/zxu/), and [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) in common. Starting from 2015, I joined the research group of intelligence processor, led by [Prof. CHEN Yunji](http://novel.ict.ac.cn/ychen) and [Prof. CHEN Tianshi](http://novel.ict.ac.cn/tchen). I am one of the two winners of the Special Scholarship of the Director, ICT (the XIA Peisu Scholarship), in 2019, one of the winners of the Excellent Scholarship of the President, CAS, in 2020, and selected for the Special Research Assistant Funding Project in 2020.
 
 Today I am an assistant professor at ICT, CAS. My research interests are including accelerator architectures and neural-symbolic system. 
 
@@ -53,4 +53,4 @@ Learn more on my [GitHub](https://github.com/AeanSR).
 
 Contact me via v#aean.net (personal) or zhaoyongwei#ict.ac.cn (academic).
 
-Last Updated: 2020/7/24
+Last Updated: 2020/12/23
